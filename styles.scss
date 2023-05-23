@@ -7,92 +7,58 @@ body {
   height: 100%;
 }
 
-header,
-main,
-aside,
-footer {
-  font: {
-    size: 3em;
-  }
-  color: #fff;
-  // display: grid;
-  // place-items: center;
-  // place-content: center;
-  // justify-content: center;
-  // align-content: center;
-  // justify-items: center;
-  // align-items: center;
+.box {
+  // width: 100px;
+  // height: 100px;
+  background-color: #0edd23;
   display: flex;
   justify-content: center;
   align-items: center;
-  // margin: auto;
+  color: #fff;
+  font-size: 3em;
 }
 
-header {
-  background-color: #e69617;
-  grid-area: header;
-}
-
-aside {
-  background-color: #4bcf13;
-  grid-area: aside;
-}
-
-main {
-  background-color: #165edb;
-  grid-area: main;
-}
-
-footer {
-  background-color: #e71240;
-  grid-area: footer;
-}
-
-body {
-  background-color: #c1b9b9;
+section {
+  height: 100%;
   display: grid;
+  // i have a 3 x 3 grid layout
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: 100px 100px 100px;
   gap: 10px;
+  place-content: center;
+  grid-auto-rows: 100px;
+  // grid-auto-flow: column;
+  // grid-auto-columns: 100px;
+}
 
-  @media (min-width: 1900px) {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 120px auto 150px;
-    grid-template-areas:
-      "header header header"
-      "aside     main     main"
-      "footer   footer  footer";
-  }
+.box-1 {
+  background-color: #c63814;
+  // grid-column-start: 1;
+  // grid-column-end: 3;
+  // grid-row-start: 1;
+  // grid-row-end: 3;
+  grid-column: 2 / 4;
+  // grid-column: 3 /4;
+  // grid-row: 6 / 7 ;
+}
 
-  @media (max-width: 1900px) and (min-width: 1200px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 120px auto 150px;
-    grid-template-areas:
-      "header header"
-      "main aside"
-      "footer   footer";
-  }
+.box-2 {
+  background-color: #e6b40f;
+  grid-row: 1 / 4;
+}
 
-  @media (max-width: 1200px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 120px auto auto 150px;
-    grid-template-areas:
-      "header"
-      "main" 
-      "aside"
-      "footer";
-  }
+.box-5 {
+  background-color: #15a2d6;
+  grid-column: span 2;
+}
 
-  //   grid-template-areas:
-  //   "header main  footer"
-  //   "header  main    footer"
-  //   "header   aside  footer"
-  // ;
-  // grid-template-areas:
-  //   "aside footer footer"
-  //   "aside     main     main"
-  //   "header   main  main"
-  // ;
-  // grid-template-areas:
-  //   ". header header"
-  //   "aside     main     main"
-  //   "footer   footer  footer";
+.box-8 {
+  background-color: #cb16d1;
+  grid-row: 4 / 6;
+  grid-column: 3 / 4 ;
+}
+
+.box-9 {
+  background-color: #000000;
+  grid-column: span 2;
 }
