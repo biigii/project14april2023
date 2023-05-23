@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+}
+
+article {
+  height: 200px;
+  background-color: #f33;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+article p {
+  background-color: #37b972;
+}
+
+section {
+  height: 500px;
+  background-color: #e3b11a;
+  gap: 5px;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  justify-items: center;
+  align-items: center;
+}
+section p {
+  background-color: #37b972;
+}/*# sourceMappingURL=styles.css.map */
